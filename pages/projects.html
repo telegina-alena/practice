@@ -1,18 +1,10 @@
 <!DOCTYPE html>
-<html lamg="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Практики</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrapicons@1.11.1/font/bootstrap-icons.css"
-    />
-    <style>
+    <title>Мои проекты</title>
+    <link rel="stylesheet" href="../style/styles.css" />
+        <style>
           /* Стили для модального окна */
           dialog::backdrop {
             background: rgba(0, 0, 0, 0.6);
@@ -139,169 +131,119 @@
           }
       </style> 
   </head>
-  <body class="bg-light">
-    <header class="bg-primary text-white py-4">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col">
-            <h1 class="h3 mb-1">Мои проекты</h1>
-            <p class="mb-0 opacity-75">Алёна</p>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="container">
+          <div class="header__content">
+            <h1 class="header__title">Телегина Алёна</h1>
+            <p class="header__subtitle">Студент-разработчик</p>
           </div>
         </div>
-      </div>
-    </header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bstoggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="/index.html">
-                <i class="bi bi-house me-1"></i>Главная
-              </a>
+      </header>
+      <nav class="nav">
+        <div class="container">
+          <ul>
+            <li class="nav__item nav__item">
+              <a href="../index.html" class="nav-link">Главная</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="diary.html">
-                <i class="bi bi-newspaper me-1"></i>Дневник
-              </a>
+            <li class="nav__item--active">
+              <a href="projects.html" class="nav-link" aria-current="page">Проекты</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="practices.html">
-                <i class="bi bi-code-slash me-1"></i>Проекты
-              </a>
+            <li class="nav__item">
+              <a href="diary.html" class="nav-link">Дневник</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacts.html">
-                <i class="bi bi-telephone me-1"></i>Контакты
-              </a>
+            <li class="nav__item">
+              <a href="contacts.html" class="nav-link">Контакты</a>
             </li>
           </ul>
         </div>
-      </div>
-    </nav>
-    <main class="container my-4">
-      <h4>Мои проекты</h4>
-      <!-- проекты -->
-      <section class="mb-5">
-          <div class="card-header bg-light">
-          </div>
-          <div class="card-body">
-            <div class="row g-3">
-              <div class="col-md-4">
-                <div class="card h-100">
-                  <img
-                    src="images/project1.jpg"
-                    class="cardimg-top"
-                    alt="Личный сайт"
-                    style="height: 150px; object-fit: cover"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Личный сайт</h5>
-                    <p class="card-text small text-muted">
-                    </p>
-                    <div class="mb-2">
-                      <span class="badge bg-primary">HTML</span>
-                      <span class="badge bg-primary">CSS</span><br>
-                      <button class="badge bg-secondary"
-      onclick="contactModal.showModal()">Детали проекта</button>
-                    </div>
+      </nav>
+      <main class="main">
+        <div class="container">
+          <section class="projects-preview">
+            <h3 class="section-title">Мои проекты</h3>
+            <div class="projects-preview__grid">
+              <article class="project-card" onclick="contactModal.showModal()">
+                <div class="project-card__image">
+                  <img src="../images/goods_1.png" alt="Личный сайт" />
+                </div>
+                <div class="project-card__content">
+                  <h5 class="project-card__title">Личный сайт</h5>
+                  <p class="project-card__description">
+                    Сайт-портфолио на HTML, CSS и Bootstrap с адаптивным дизайном.
+                  </p>
+                  <div class="project-card__tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card h-100">
+              </article>
+              <article class="project-card" onclick="contactModal.showModal()">
+                <div class="project-card__image">
                   <img
-                    src="images/project2.jpg"
-                    class="cardimg-top"
+                    src="../images/goods_2.png"
                     alt="Todo приложение"
-                    style="height: 150px; object-fit: cover"
                   />
-                  <div class="card-body">
-                    <h5 class="card-title">Todo-приложение</h5>
-                    <p class="card-text small text-muted">
-                    </p>
-                    <div class="mb-2">
-                      <span class="badge bg-success">JavaScript</span><br>
-                      <button class="badge bg-secondary"
-      onclick="contactModal.showModal()">Детали проекта</button>
-                      
-                    </div>
+                </div>
+                <div class="project-card__content">
+                  <h3 class="project-card__title">Todo приложение</h3>
+                  <p class="project-card__description">
+                    Приложение для управления задачами с использованием JavaScript.
+                  </p>
+                  <div class="project-card__tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">LocalStorage</span>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card h-100">
-                  <img
-                    src="images/project3.jpg"
-                    class="cardimg-top"
-                    alt="Интернет-магазин"
-                    style="height: 150px; object-fit: cover"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Интернет-магазин</h5>
-                    <p class="card-text small text-muted">
-                    </p>
-                    <div class="mb-2">
-                      <span class="badge bg-info">React</span><br>
-                      <button class="badge bg-secondary"
-      onclick="contactModal.showModal()">Детали проекта</button>
-                    </div>
+              </article>
+              <article class="project-card" onclick="contactModal.showModal()">
+                <div class="project-card__image">
+                  <img src="../images/goods_3.png" alt="Интернет-магазин" />
+                </div>
+                <div class="project-card__content">
+                  <h3 class="project-card__title">Интернет-магазин</h3>
+                  <p class="project-card__description">
+                    Прототип интернет-магазина с корзиной товарови фильтрацией.
+                  </p>
+                  <div class="project-card__tags">
+                    <span class="tag">React</span>
+                    <span class="tag">API</span>
                   </div>
                 </div>
-              </div>
-                            <div class="col-md-4">
-                <div class="card h-100">
-                  <img
-                    src="images/project3.jpg"
-                    class="cardimg-top"
-                    alt="Интернет-магазин"
-                    style="height: 150px; object-fit: cover"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Портфолио</h5>
-                    <p class="card-text small text-muted">
-                    </p>
-                    <div class="mb-2">
-                      <span class="badge bg-info">React</span><br>
-                      <button  class="badge bg-secondary"
-      onclick="contactModal.showModal()">Детали проекта</button>
-                    </div>
+              </article>
+              <article class="project-card" onclick="contactModal.showModal()">
+                <div class="project-card__image">
+                  <img src="../images/project.png" alt="Портфолио">
+                </div>
+                <div class="project-card__content">
+                  <h5 class="project-card__title">Портфолио</h5>
+                  <p class="project-card__description">Личный Сайт-портфолио</p>
+                  <div class="project-card__tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">Bootstrap</span>
                   </div>
                 </div>
-              </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__content">
+            <p class="footer__copyright">&copy; 2025 StudentDev Portfolio</p>
+            <div class="footer__links">
+              <a href="mailto:student@edu.ru" class="footer__link"
+                >student@edu.ru</a
+              >
+              <a href="https://github.com" class="footer__link">GitHub</a>
             </div>
           </div>
-      </section>
-    </main>
-    <footer class="bg-dark text-white py-4 mt-5">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <p class="mb-0">
-              &copy; 2025 Портфолио студента. Все права защищены.
-            </p>
-          </div>
-          <div class="col-md-6 text-md-end">
-            <a
-              href="pages/contacts.html"
-              class="text-white textdecoration-none me-3"
-              >Контакты</a
-            >
-            <a href="#" class="text-white text-decorationnone"
-              >Политика конфиденциальности</a
-            >
-          </div>
         </div>
-      </div>
-    </footer>
-  <!-- Модальное окно для информации по проекту -->
+      </footer>
+      <!-- Модальное окно для информации по проекту -->
       <dialog id="contactModal">
       <div class="modal-header">
         <h2>Детальная информация проекта</h2>
@@ -310,7 +252,7 @@
     <img 
     src="/images/project.png"
     class="cardimg-top"
-    style="height: auto; object-fit: cover">
+    style="height: auto; width: 300px; object-fit: cover">
     <p>Информация появится в скором будущем (наверно)</p>
     </div>
       </dialog>
@@ -323,6 +265,6 @@
         }
         });
       </script>
-      </div>
+    </div>
   </body>
 </html>
